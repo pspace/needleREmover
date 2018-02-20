@@ -15,6 +15,8 @@ import needleremover.R;
 
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "needleREmover";
+
 
     // Used to load the 'native-lib' library on application startup.
     static {

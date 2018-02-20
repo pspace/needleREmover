@@ -6,112 +6,129 @@
     android:layout_height="match_parent"
     tools:context="space.polylog.owasp.needleremover.SSLActivity">
 
-    <TableLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
-        <TableRow
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="top"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tableLayout2">
 
-            <TextView
-                android:id="@+id/ssl_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ssl_active"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/sslStatus"
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/no"
-                android:textAlignment="textEnd"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:orientation="horizontal">
 
-        </TableRow>
+                <TextView
+                    android:id="@+id/ssl_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ssl_active"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/sslStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/no"
+                    android:textAlignment="textEnd"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/valid_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cert_valid"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+            </TableRow>
 
-            <TextView
-                android:id="@+id/validStatus"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/no"
-                android:textAlignment="textEnd"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-        </TableRow>
+                android:layout_height="wrap_content">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="34dp">
+                <TextView
+                    android:id="@+id/valid_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cert_valid"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="39dp" />
-        </TableRow>
+                <TextView
+                    android:id="@+id/validStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"
+                    android:textAlignment="textEnd"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/certIDLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/certificate_id" />
-
-            <TextView
-                android:id="@+id/certID"
-                android:layout_width="182dp"
-                android:layout_height="43dp"
-                android:text="@string/textview"
-                android:textAlignment="textEnd" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <EditText
-                android:id="@+id/url"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textUri"
-                android:singleLine="true"
-                android:labelFor="@+id/url"
-                android:text="@string/https_owasp_org" />
-
-            <Button
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/get"
-                android:onClick="onGetClick"
-                />
-        </TableRow>
-    </TableLayout>
+                android:layout_height="34dp">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/certIDLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/certificate_id" />
+
+                <TextView
+                    android:id="@+id/certID"
+                    android:layout_width="182dp"
+                    android:layout_height="43dp"
+                    android:text="@string/textview"
+                    android:textAlignment="textEnd" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textUri"
+                    android:labelFor="@+id/url"
+                    android:singleLine="true"
+                    android:text="https://corporate.xing.com/fileadmin/user_upload/rfc-2350.txt" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onGetClick"
+                    android:text="@string/get" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/contentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayout2"
+            android:layout_centerHorizontal="true"
+            android:text="TextView" />
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
