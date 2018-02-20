@@ -46,7 +46,7 @@ public class CounterActivity extends AppCompatActivity {
 
         timer = new Timer();
         TimerTask tt = getTimerTask();
-        timer.scheduleAtFixedRate(tt, 0l, 1000l);
+        timer.scheduleAtFixedRate(tt, 0l, 300l);
         isCounting = true;
     }
 
@@ -79,7 +79,7 @@ public class CounterActivity extends AppCompatActivity {
     }
 
     public void onClickReset(View view) {
-        count = 0;
+        resetCounter();
     }
 
     private int getCount() {

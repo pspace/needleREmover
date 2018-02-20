@@ -22,6 +22,7 @@
         <activity android:name="space.polylog.owasp.needleremover.TextActivity" />
         <activity android:name="space.polylog.owasp.needleremover.CounterActivity" />
         <activity android:name="space.polylog.owasp.needleremover.SSLActivity" />
+
     </application>
 
 </manifest>

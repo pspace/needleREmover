@@ -70,6 +70,7 @@
                     android:layout_weight="1"
                     android:onClick="onClickReset"
                     android:text="@string/reset" />
+
             </LinearLayout>
         </TableRow>
     </TableLayout>

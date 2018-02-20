@@ -9,4 +9,15 @@
     <string name="your_ad">For just 9,99 € your ad could be placed here as well.</string>
     <string name="StSt">Start/Stop</string>
     <string name="reset">Reset</string>
+    <string name="text_desc">Checkout simple text maipulation</string>
+    <string name="ssl_label">Dive into the world of encrypted connections!</string>
+    <string name="counter_label">Play with a counter!</string>
+    <string name="https_owasp_org">https://owasp.org</string>
+    <string name="ssl_active">SSL active:</string>
+    <string name="no">NO</string>
+    <string name="get">GET</string>
+    <string name="no">NO</string>
+    <string name="cert_valid">CERT valid:</string>
+    <string name="textview">TextView</string>
+    <string name="certificate_id">Certificate ID:</string>
 </resources>
