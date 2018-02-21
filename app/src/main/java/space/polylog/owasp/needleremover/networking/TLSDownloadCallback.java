@@ -1,25 +1,28 @@
-package space.polylog.owasp.needleremover;
+package space.polylog.owasp.needleremover.networking;
 
 import android.net.NetworkInfo;
 
-/**
- * Created by hsp on 2/20/18.
- */
+import java.security.cert.Certificate;
 
-interface DownloadCallback {
-    interface Progress {
-        int ERROR = -1;
-        int CONNECT_SUCCESS = 0;
-        int GET_INPUT_STREAM_SUCCESS = 1;
-        int PROCESS_INPUT_STREAM_IN_PROGRESS = 2;
-        int PROCESS_INPUT_STREAM_SUCCESS = 3;
+public interface TLSDownloadCallback {
+    enum  Progress {
+        ERROR(-1),
+        CONNECT_SUCCESS(0),
+        GET_INPUT_STREAM_SUCCESS(1),
+         PROCESS_INPUT_STREAM_IN_PROGRESS(2),
+         PROCESS_INPUT_STREAM_SUCCESS(3);
+
+        private int status;
+        Progress(int i){
+            status = i;
+        }
     }
 
     /**
      * Indicates that the callback handler needs to update its appearance or information based on
      * the result of the task. Expected to be called from the main thread.
      */
-    void updateFromDownload(T result);
+    void updateFromDownload(String result);
 
     /**
      * Get the device's active network status in the form of a NetworkInfo object.
@@ -28,15 +31,16 @@ interface DownloadCallback {
 
     /**
      * Indicate to callback handler any progress update.
-     * @param progressCode must be one of the constants defined in DownloadCallback.Progress.
+     * @param progress must be one of the constants defined in DownloadCallback.Progress.
      * @param percentComplete must be 0-100.
      */
-    void onProgressUpdate(int progressCode, int percentComplete);
+    void onProgressUpdate(Progress progress, int percentComplete);
 
     /**
      * Indicates that the download operation has finished. This method is called even if the
      * download hasn't completed successfully.
      */
     void finishDownloading();
-}
+
+    void updateCertificateInfo(Certificate[] certificates);
 }
