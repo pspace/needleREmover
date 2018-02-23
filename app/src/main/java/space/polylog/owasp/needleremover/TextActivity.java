@@ -18,7 +18,7 @@ public class TextActivity extends AppCompatActivity {
 
     private void setPanelContent(String new_content){
         TextView simpleTextView = (TextView)findViewById(R.id.textView);
-        simpleTextView.setText(new_content);
+            simpleTextView.setText(new_content);
     }
 
     public void setTextOnClick(View view) {

@@ -252,6 +252,7 @@ public class NetworkFragment extends Fragment {
                 connection.connect();
 
                 publishProgress(TLSDownloadCallback.Progress.CONNECT_SUCCESS.ordinal());
+
                 int responseCode = connection.getResponseCode();
                 if (responseCode != HttpsURLConnection.HTTP_OK) {
                     throw new IOException("HTTP error code: " + responseCode);
@@ -263,7 +264,10 @@ public class NetworkFragment extends Fragment {
                     // Converts Stream to String with max length of 500.
                     result = readStream(stream, 500);
                 }
-            } finally {
+            } catch(Exception e){
+                Log.e(TAG, e.getMessage(),e);
+            }
+            finally {
                 // Close Stream and disconnect HTTPS connection.
                 if (stream != null) {
                     stream.close();

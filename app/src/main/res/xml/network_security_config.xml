@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="true">owasp.org</domain>
+        <pin-set expiration="2018-12-12">
+            <pin digest="SHA-256">gMnu/GBFm97AV1hdQ7jyv3rP3a32tZ/PoKpf23ibZ6o=</pin>
+        </pin-set>
+    </domain-config>
+</network-security-config>
