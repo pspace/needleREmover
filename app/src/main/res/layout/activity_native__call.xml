@@ -6,4 +6,28 @@
     android:layout_height="match_parent"
     tools:context="space.polylog.owasp.needleremover.Native_Call">
 
+    <TextView
+        android:id="@+id/nativeView"
+        android:layout_width="382dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/native_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nativeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/button_get_native"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="doNativeThing"
+        app:layout_constraintTop_toBottomOf="@+id/nativeView" />
 </android.support.constraint.ConstraintLayout>

@@ -20,4 +20,8 @@
     <string name="textview">TextView</string>
     <string name="certificate_id">Certificate ID:</string>
     <string name="default_url">https://owasp.org</string>
+    <string name="native_text">Native Text!</string>
+    <string name="button_get_native">Get text from native lib!</string>
+    <string name="intercept_access_to_native_libs">Intercept access to native libs!</string>
+    <string name="native_txt">NATIVE</string>
 </resources>

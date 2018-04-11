@@ -19,6 +19,7 @@ import space.polylog.owasp.needleremover.networking.NetworkFragment;
 import space.polylog.owasp.needleremover.networking.TLSDownloadCallback;
 
 
+
 public class SSLActivity extends AppCompatActivity implements TLSDownloadCallback {
     private static final String TAG = "needleREmover.TLS";
 
@@ -30,13 +31,11 @@ public class SSLActivity extends AppCompatActivity implements TLSDownloadCallbac
     // downloads with consecutive button clicks.
     private boolean mDownloading = false;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ssl);
         mNetworkFragment = NetworkFragment.getInstance(getSupportFragmentManager());
-
     }
 
     public void onGetClick(View view) {

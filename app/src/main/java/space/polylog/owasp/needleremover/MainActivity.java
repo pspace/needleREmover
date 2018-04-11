@@ -29,9 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.greetingsView);
-        tv.setText(stringFromJNI());
+
     }
 
     @Override
@@ -56,11 +54,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
+
 
     public void onTextClick(View view) {
         Intent intent = new Intent(this, TextActivity.class);
@@ -74,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onCounterClick(View view) {
         Intent intent = new Intent(this, CounterActivity.class);
+        startActivity(intent);
+    }
+
+    public void onNativeClick(View view) {
+        Intent intent = new Intent(this, Native_Call.class);
         startActivity(intent);
     }
 }
